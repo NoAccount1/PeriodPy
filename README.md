@@ -15,4 +15,4 @@
 
 ## Installation sur PC
 
-6. `...`
+1. `...`
