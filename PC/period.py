@@ -1,4 +1,3 @@
-# {"Nom": "","Symbole": "","Phase": "","Categorie": "","Numéro": ,"Xpos": ,"Ypos": },
 Period = [
  {"Nom": "Hydrogène","Symbole": "H","Phase": "Gaz","Categorie": "Non-métal","Numéro": 1,"Xpos": 1,"Ypos": 1},
  {"Nom": "Helium","Symbole": "He","Phase": "Gaz","Categorie": "Gaz noble","Numéro": 2,"Xpos": 18,"Ypos": 1},

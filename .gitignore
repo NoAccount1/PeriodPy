@@ -1,5 +1,15 @@
-.idea
-.vscode
-__pycache__
-TI-83/__pycache__/
-desktop.ini
+# Config folders
+/.idea
+/.vscode
+
+# Python cache
+/__pycache__
+/TI-83/__pycache__/
+/PC/__pycache__
+
+# System
+/desktop.ini
+/TI-83/desktop.ini
+
+# Others files
+/others
