@@ -7,11 +7,15 @@
 1. Installer [TI-Connect](https://education.ti.com/fr/produits/logiciel-ordinateur/ti-connect-ce-sw)
 2. Connecter la calculatrice
 3. Transferer :
-   * [`DTABLE.py`](TI-83/DTABLE.py)
-   * [`HELPER.py`](TI-83/HELPER.py)
-   * [`SETUP.py`](TI-83/SETUP.py)
-   * [`STABLE.py`](TI-83/STABLE.py)
-4. ⚠ Ne pas transferer le contenu du dossier `/src`
+    * [`DTABLE.py`](TI-83/DTABLE.py)
+    * [`HELPER.py`](TI-83/HELPER.py)
+    * [`SETUP.py`](TI-83/SETUP.py)
+    * [`MAIN.py`](TI-83/MAIN.py)
+    * ⚠ Ne pas transferer le contenu du dossier `/src`, il contient le tableau dans un fichier JSON
+4. Executer `SETUP.py` pour configuerer la taille de la fenêtre
+    > Par défaut, sur la calculatrice TI-83 Premium CE, la fenêtre mesure 32x11
+
+Pour utiliser PeriodPy, executer `MAIN.py`
 
 ## Installation sur PC
 

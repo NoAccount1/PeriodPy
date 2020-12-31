@@ -1,4 +1,4 @@
-from HELPER import *
+from HELPER import cl,menuPrint,printTbl,delAccents
 from DTABLE import Period
 
 while True:
