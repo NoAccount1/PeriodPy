@@ -1,4 +1,5 @@
-from DDICT import Dict
+phase = ["Solide", "Liquide", "Gazeux"]
+category = ['Métaloïde', 'Gaz noble', 'Non-métal', 'Métal pauvre', 'Mt de trans', 'Alcalin', 'Halogène', 'Alc-terreu']
 
 def lprint(txt:str):
     ln = len(txt)
@@ -27,17 +28,7 @@ def lprint(txt:str):
                     txtln += 1
     return txtln
 
-def cl():
-    print("\n" * 10)
-
-def defPrint(sbj, name):
-    nom = Dict[sbj]["dict"][name]["name"]
-    dfn = Dict[sbj]["dict"][name]["def"]
-    print(nom + ":")
-    print("-----------------")
-    spc = lprint(dfn)
-    spc = "\n" * (9 - (spc + 2))
-    print(spc)
+def cl(): print("\n" * 10)
 
 def menuPrint(a, *item):
     if len(item) > 10:
@@ -59,31 +50,21 @@ def menuPrint(a, *item):
             cl()
             print("Choix invalide")
 
-def formatParam(p):
-    if len(p) > 11:
-        print("Invalid length")
-    else:
-        for i in range(12 - len(p)):
-            p = p + " "
-    return p
+def fParam(p):
+    if len(p) > 11: print("Invalid length")
+    else: return p + " "*(12-len(p))
 
-def printTbl(nm, sy, ph, ca, nb, xp, yp):
-    name = formatParam(str(nm))
-    symbol = formatParam(str(sy))
-    phase = formatParam(str(ph))
-    category = formatParam(str(ca))
-    number = formatParam(str(nb))
-    xypos = str(xp) + " / " + str(yp)
-    pos = formatParam(xypos)
+def printTbl(nm,sy,ph,ca,nb,xp,yp):
+    n,s,p,c,z,xy = fParam(str(nm)),fParam(str(sy)),fParam(str(phase[ph])),fParam(str(category[ca])),fParam(str(nb)),fParam(str(xp) + " / " + str(yp))
     print("  ____________________________ \n"
-          " | Nom         |", name, "|\n"
-          " | Symbole     |", symbol, "|\n"
+          " | Nom         |", n, "|\n"
+          " | Symbole     |", s, "|\n"
           " |_____________|______________|\n"
-          " | Période/Col |", pos, "|\n"
-          " | N° atomique |", number, "|\n"
+          " | Période/Col |", xy, "|\n"
+          " | N° atomique |", z, "|\n"
           " |_____________|______________|\n"
-          " | Phase       |", phase, "|\n"
-          " | Categorie   |", category, "|\n"
+          " | Phase       |", p, "|\n"
+          " | Categorie   |", c, "|\n"
           " |_____________|______________|")
 
 def delAccents(ligne):
@@ -97,7 +78,7 @@ def delAccents(ligne):
 
 def linput(inline:bool,txt:str):
     if inline==True:
-        input(txt+("\n"*heigth)+">>> ")
+        input(txt+("\n"*HEIGHT)+">>> ")
     else:
         txt = input(txt,"\n>>> ")
     return txt

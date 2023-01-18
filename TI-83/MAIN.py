@@ -1,5 +1,5 @@
 from HELPER import cl,menuPrint,printTbl,delAccents
-from DTABLE import Period
+from COMPRESS import P
 
 while True:
     cl()
@@ -7,47 +7,26 @@ while True:
     if menu == 1:
         cl()
         a = int(input("Element N°" + ("\n" * 10) + ">>> ")) - 1
-        print()
-        printTbl(
-            Period[a]["Nom"],
-            Period[a]["Symbole"],
-            Period[a]["Phase"],
-            Period[a]["Categorie"],
-            Period[a]["Numéro"],
-            Period[a]["Ypos"],
-            Period[a]["Xpos"],
-        )
+        if a <= len(P):
+            print()
+            printTbl(P[a]["N"],P[a]["S"],P[a]["P"],P[a]["C"],P[a]["Z"],P[a]["Y"],P[a]["X"],)
+        else: print("Élément introuvable")
     elif menu == 2:
         cl()
         a = input("Symbole" + ("\n" * 10) + ">>> ").lower()
-        for i in Period:
-            if i["Symbole"].lower() == a:
+        for i in P:
+            if i["S"].lower() == a:
                 print()
-                printTbl(
-                    i["Nom"],
-                    i["Symbole"],
-                    i["Phase"],
-                    i["Categorie"],
-                    i["Numéro"],
-                    i["Xpos"],
-                    i["Ypos"],
-                )
+                printTbl(i["N"],i["S"],i["P"],i["C"],i["Z"],i["X"],i["Y"],)
                 break
         else: print("Élément introuvable")
     elif menu == 3:
         cl()
         a = delAccents(input("Nom" + ("\n" * 10) + ">>> ").lower())
-        for i in Period:
-            if i["Nom"].lower() == a:
-                printTbl(
-                    i["Nom"],
-                    i["Symbole"],
-                    i["Phase"],
-                    i["Categorie"],
-                    i["Numéro"],
-                    i["Xpos"],
-                    i["Ypos"],
-                )
+        print(a)
+        for i in P:
+            if delAccents(i["N"].lower()) == a:
+                printTbl(i["N"],i["S"],i["P"],i["C"],i["Z"],i["X"],i["Y"],)
                 break
         else: print("Élément introuvable")
     elif menu == 4:
