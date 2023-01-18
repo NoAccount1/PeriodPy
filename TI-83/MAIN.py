@@ -3,7 +3,7 @@ from DTABLE import Period
 
 while True:
     cl()
-    menu = menuPrint(1,"With number","With symbol","With name","With valence"," *Quitter")
+    menu = menuPrint(1,"Par numéro","Par symbole","Par nom","Par valence"," *Quitter")
     if menu == 1:
         cl()
         a = int(input("Element N°" + ("\n" * 10) + ">>> ")) - 1
@@ -33,8 +33,7 @@ while True:
                     i["Ypos"],
                 )
                 break
-        else:
-            print("Not found")
+        else: print("Élément introuvable")
     elif menu == 3:
         cl()
         a = delAccents(input("Nom" + ("\n" * 10) + ">>> ").lower())
@@ -50,8 +49,7 @@ while True:
                     i["Ypos"],
                 )
                 break
-        else:
-            print("Élément introuvable")
+        else: print("Élément introuvable")
     elif menu == 4:
         print("menu 4")
     elif menu == 5:
